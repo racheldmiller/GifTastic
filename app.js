@@ -1,4 +1,3 @@
-// TEST: What happens if I use $(document).ready(function() { up here?
 $(document).ready(function() {
   // <!-------------------------------- READY, SET ... ----------------------------------->
 
@@ -16,15 +15,14 @@ $(document).ready(function() {
     "shan yu"
   ];
 
-  // Per acceptance criteria, images should start off with a still data-state.
-  // Do I need to create a separate variable to represent that state?
+  var gifRunning = false;
 
   // create a function to dynamically create villain buttons
   function createButtons() {
     $(".villainButtons").empty(); // or should this exist outside of this function? Shouldn't be any buttons initially.
     for (var i = 0; i < villains.length; i++) {
       // generate buttons for each villain in my array
-      var a = $("<button>");
+      var a = $("<button type='button' class='btn btn-info'>");
       // add class
       a.addClass("villain"); // should consider renaming this b/c it can get confusing. How about... "evil"?
       // add data-attribute

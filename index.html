@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GifTastic</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">.
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    .
+  </head>
+  <body>
+    <!-- ** TO:DO: Find a better way to display these. Maybe in a Navbar through Bootstrap? ** -->
 
-  <!-- ** TO:DO: Find a better way to display these. Maybe in a Navbar through Bootstrap? ** -->
+    <div class="villainButtons">
+      <!-- All of my searches will appear in this div -->
 
-  <div class="villainButtons">
-  <!-- All of my searches will appear in this div -->
-
-  <!-- These were my predisposed tester STATIC buttons -->
-  <!-- <button data-villain="jafar">Jafar</button>
+      <!-- These were my predisposed tester STATIC buttons -->
+      <!-- <button data-villain="jafar">Jafar</button>
   <button data-villain="ursula">Ursula</button>
   <button data-villain="yzma">Yzma</button> -->
-  </div>
-  
-  <!-- Where I plan on appending the images? -->
-  <div id="images"> 
-  </div>
+    </div>
 
-  <!-------------------------------------- SEARCH BUTTON ------------------------------------->
-  
-  <!-- ** TO-DO: Organize the grid so this search bar doesn't go to the bottom of the page w/ every search -->
+    <!-- Where I plan on appending the images? -->
+    <div id="images"></div>
+
+    <!-------------------------------------- SEARCH BUTTON ------------------------------------->
+
+    <!-- ** TO-DO: Organize the grid so this search bar doesn't go to the bottom of the page w/ every search -->
 
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Add More Chaos" aria-label="Add More Chaos" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="gifsearch">MUAHAHA</button>
-        </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Add More Chaos"
+        aria-label="Add More Chaos"
+        aria-describedby="button-addon2"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="gifsearch">
+          MUAHAHA
+        </button>
       </div>
+    </div>
 
-      <!-- API KEY 7429ws6piuEB26imq9yjxJmwY4Tn7UEj --> 
-      <!-- See "API Explorer" to grab a link that filters to 10 gifs @ a time-->
+    <!-- API KEY 7429ws6piuEB26imq9yjxJmwY4Tn7UEj -->
+    <!-- See "API Explorer" to grab a link that filters to 10 gifs @ a time-->
 
-    
-  <!-- The slim jQuery link from Bootstrap did NOT work. Stackoverflow mentions how it loses AJAX functionality. -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  <script type="text/javascript" src="app.js">
-  </script>
+    <!-- The slim jQuery link from Bootstrap did NOT work. Stackoverflow mentions how it loses AJAX functionality. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
 
-</body>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
 </html>
-
