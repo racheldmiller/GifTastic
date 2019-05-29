@@ -60,7 +60,7 @@ $(document).ready(function() {
     var queryURL =
       "https://api.giphy.com/v1/gifs/search?q=" +
       villain +
-      "&api_key=7429ws6piuEB26imq9yjxJmwY4Tn7UEj";
+      "&limit=10&api_key=7429ws6piuEB26imq9yjxJmwY4Tn7UEj";
 
     // Perform an AJAX method --> GET request to our queryURL
     $.ajax({
@@ -82,7 +82,7 @@ $(document).ready(function() {
           var villainImage = $("<img>");
 
           // Set the src attribute of the image to a property pulled off the result item
-          villainImage.attr("src", results[i].images.fixed_height.url);
+          villainImage.attr("src", results[j].images.fixed_height.url);
           // .attr takes two arguments (seen in parenthesis): source, actual value of src
 
           // Prepend the villainImage to the HTML page in the "images" div
@@ -96,8 +96,9 @@ $(document).ready(function() {
     event.preventDefault();
     var villain = $(".form-control") // alternative: "input" (in this case)
       .val()
-      .trim(); //will have to double-check this... doesn't look quite right
-    // createButtons();
+      .trim();
+    villains.push(villain); //will have to double-check this... doesn't look quite right
+    createButtons();
 
     // need to put this somewhere
     // showVillains();
