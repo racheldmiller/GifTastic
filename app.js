@@ -82,13 +82,38 @@ $(document).ready(function() {
           var villainImage = $("<img>");
 
           // Set the src attribute of the image to a property pulled off the result item
-          villainImage.attr("src", results[j].images.fixed_height.url);
+          villainImage.attr("src", results[j].images.fixed_height_small.url);
           // .attr takes two arguments (seen in parenthesis): source, actual value of src
 
           // Prepend the villainImage to the HTML page in the "images" div
           $("#images").prepend(villainImage);
+
+          villainImage.addClass("villainClass");
+          villainImage.attr("data-state", "still");
+          villainImage.attr(
+            "data-still",
+            results[j].images.fixed_height_small_still.url
+          );
+          villainImage.attr(
+            "data-animate",
+            results[j].images.fixed_height_small.url
+          );
         }
+        animateGifs();
       });
+  }
+
+  function animateGifs() {
+    $(".villainClass").on("click", function() {
+      var state = $(this).attr("data-state");
+      if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    });
   }
 
   // Be able to search for more villains
@@ -106,7 +131,6 @@ $(document).ready(function() {
     console.log("a button was clicked", villain);
     // <!----------------------------------- GIPHY STATE FUNCTIONALITY ------------------------------------->
 
-    // need to figure out how to make this work
     // $("#images").on("click", function() {
     //   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
     //   var state = $(this).attr("data-state");
