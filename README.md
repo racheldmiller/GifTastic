@@ -9,6 +9,9 @@ HTML | JavaScript | Giphy API
 <h3>Additional Commentary</h3>
 I noticed if the Disney villain isn't as "popular," the Giphy images won't exclusively be of them. Also, maybe it's an issue with my laptop, but I have to press the image really hard in order to get the image to pause.
 
+<h3>Problems with Initial Submission</h3>
+Wasn't able to successfully pull from the API. This code has come a long way.
+
 <h3>TO-DO LIST</h3>
 Style the page more with some CSS.
 
