@@ -15,8 +15,6 @@ $(document).ready(function() {
     "shan yu"
   ];
 
-  var gifRunning = false;
-
   // create a function to dynamically create villain buttons
   function createButtons() {
     $(".villainButtons").empty(); // or should this exist outside of this function? Shouldn't be any buttons initially.
@@ -103,6 +101,8 @@ $(document).ready(function() {
       });
   }
 
+  // <!----------------------------------- GIPHY STATE FUNCTIONALITY ------------------------------------->
+
   function animateGifs() {
     $(".villainClass").on("click", function() {
       var state = $(this).attr("data-state");
@@ -116,33 +116,17 @@ $(document).ready(function() {
     });
   }
 
-  // Be able to search for more villains
+  // <!----------------------------------- SEARCH MORE VILLAINS ------------------------------------->
+
   $("#gifsearch").on("click", function(event) {
     event.preventDefault();
     var villain = $(".form-control") // alternative: "input" (in this case)
       .val()
       .trim();
-    villains.push(villain); //will have to double-check this... doesn't look quite right
+    villains.push(villain);
     createButtons();
 
-    // need to put this somewhere
-    // showVillains();
-
     console.log("a button was clicked", villain);
-    // <!----------------------------------- GIPHY STATE FUNCTIONALITY ------------------------------------->
-
-    // $("#images").on("click", function() {
-    //   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-    //   var state = $(this).attr("data-state");
-
-    //   if (state === "still") {
-    //     $(this).attr("src", $(this).attr("data-animate"));
-    //     $(this).attr("data-state", "animate");
-    //   } else {
-    //     $(this).attr("src", $(this).attr("data-still"));
-    //     $(this).attr("data-state", "still");
-    //   }
-    // });
 
     // <!----------------------------------- LOCAL STORAGE / COOKIES  ------------------------------------->
 
